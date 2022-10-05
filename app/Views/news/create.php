@@ -1,6 +1,6 @@
 <h2><?=esc($title)?></h2>
 <?=session()->getFlashdata('error')?>
-<?=service('validation')->listErrors('error')?>
+<?=service('validation')->listErrors()?>
 
 <form action="/news/create" method="post">
     <?=csrf_field()?>
