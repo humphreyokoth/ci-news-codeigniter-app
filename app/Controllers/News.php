@@ -41,7 +41,7 @@ class News extends BaseController{
         return view('templates/header',$data)
         .view('news/view')
         .view('templates/footer');
-        }
+ }
 }
 
 
