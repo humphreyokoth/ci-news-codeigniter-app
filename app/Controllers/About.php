@@ -42,5 +42,15 @@ class News extends BaseController{
         .view('news/view')
         .view('templates/footer');
  }
+
+ public function updateUser(int $userID){
+  if (!$this->validate([
+    'email'=>"required|is_unique[users.email,id,{$userID}]",
+    'name'=>'required'
+  ])) {
+   return view('users/update',['errors'=>$this->validator->getErrors(),]);
+  }
+ }
 }
+
 
